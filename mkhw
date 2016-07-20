@@ -1,0 +1,7 @@
+#!/bin/bash
+
+BIN=$HOME/bpl/bin
+cd "$BIN" || exit 1
+echo echo Hello, World! > hw
+chmod +x hw
+./hw
