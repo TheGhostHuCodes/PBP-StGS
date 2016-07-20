@@ -1,0 +1,6 @@
+#!/bin/bash
+
+BPL=$HOME/bpl
+mkdir "$BPL"
+cd "$BPL" || exit 1
+mkdir bin scripts
