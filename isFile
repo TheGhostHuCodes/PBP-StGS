@@ -1,0 +1,17 @@
+#!/bin/bash
+# Prompts the user to enter a filename. Loops until an existing file is
+# supplied.
+
+while true
+do
+    printf "Enter name of a file: "
+    read -r FILENAME
+
+    if [ -f "$FILENAME" ]
+    then
+        printf "%s is a file\n" "$FILENAME"
+        break
+    else
+        printf "%s is not a file. Try again\n" "$FILENAME"
+    fi
+done
