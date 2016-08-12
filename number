@@ -1,0 +1,17 @@
+#!/bin/bash
+# Prompts the user for number between 20 and 30 inclusive. Loops until a
+# valid number is supplied.
+
+while true
+do
+    printf "Enter a number between 20 and 30 (inclusive): "
+    read -r NUMBER
+
+    if [ "$NUMBER" -lt 20 ] || [ "$NUMBER" -gt 30 ]
+    then
+        printf "%d is not between 20 and 30\n" "$NUMBER"
+    else
+        printf "You entered %d\n" "$NUMBER"
+        break
+    fi
+done
