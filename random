@@ -1,0 +1,4 @@
+#!/bin/bash
+
+printf "%5d.%-5d\n" "$RANDOM" "$RANDOM" "$RANDOM" "$RANDOM"\
+                    "$RANDOM" "$RANDOM" "$RANDOM" "$RANDOM"
