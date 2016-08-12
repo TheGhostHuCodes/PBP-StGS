@@ -1,0 +1,27 @@
+#!/bin/bash
+# Description : print formatted sales report
+
+# Build a long string of equals signs.
+DIVIDER=========================================
+DIVIDER=$DIVIDER$DIVIDER
+
+# Format strings for printf
+HEADER="\n %-10s %11s %8s %10s\n"
+FORMAT=" %-10s %11.2f %8d %10.2f\n"
+
+# Width of divider
+TOTALWIDTH=44
+
+# Print categories
+# shellcheck disable=SC2059
+printf "$HEADER" ITEM "PER UNIT" NUM TOTAL
+
+# Print divider to match width of report
+printf "%$TOTALWIDTH.${TOTALWIDTH}s\n" "$DIVIDER"
+
+# Print lines of report
+# shellcheck disable=SC2059
+printf "$FORMAT" \
+    Chair 79.95 4 319.8 \
+    Table 209.99 1 209.99 \
+    Armchair 315.49 2 630.98 \
