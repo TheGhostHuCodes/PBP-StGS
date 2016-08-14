@@ -1,0 +1,10 @@
+#!/bin/bash
+SECS_IN_DAY=86400
+SECS_IN_HOUR=3600
+MINS_IN_HOUR=60
+SECS_IN_MIN=60
+
+DAYS=$(($1 / SECS_IN_DAY))
+SECS=$(($1 % SECS_IN_DAY))
+printf "%d:%02d:%02d:%02d\n" "$DAYS" "$((SECS / SECS_IN_HOUR))" \
+    "$(((SECS / SECS_IN_MIN) % MINS_IN_HOUR))" "$((SECS % SECS_IN_MIN))"
